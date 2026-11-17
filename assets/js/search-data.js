@@ -30,14 +30,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-fine-tuned-llms-on-bengali-datasets",
-          title: 'Fine-Tuned LLMs on Bengali Datasets',
-          description: "Fine-tuned Llama3.2 3B and Qwen2.5-7B for Bengali evaluation using MMMLU.",
+        },{id: "projects-bengali-instruction-tuning",
+          title: 'Bengali Instruction Tuning',
+          description: "Fine-tuned Llama 3.2 3B and Qwen 2.5 7B on Bengali datasets, with substantial MMMLU improvements.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bengali-llm-finetuning/";
+            },},{id: "projects-cite-or-decline",
+          title: 'Cite or Decline',
+          description: "A course-grounded chatbot for STEM lecture videos with chapter-guided retrieval and timestamped citations. EMNLP 2026, Industry Track.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cite-or-decline/";
             },},{id: "projects-document-layout-understanding",
           title: 'Document Layout Understanding',
-          description: "Trained LayoutLMV3 on FUNSD for document entity extraction.",
+          description: "Trained LayoutLMv3 on FUNSD for document entity extraction.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/document-layout-understanding/";
             },},{id: "projects-kothok-llm-merge",
@@ -45,14 +50,24 @@ ninja.data = [{
           description: "Merged Mistral-7B and Meta-Llama-3-8B with MergeKit to build a Bengali LLM.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/kothok-llm-merge/";
-            },},{id: "projects-multi-modal-visual-question-answering",
-          title: 'Multi-Modal Visual Question Answering',
+            },},{id: "projects-multimodal-visual-question-answering",
+          title: 'Multimodal Visual Question Answering',
           description: "Integrated BERT and ViT to answer questions on the DAQUAR dataset.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/multimodal-vqa/";
-            },},{id: "projects-contextual-q-and-a-with-qlora",
-          title: 'Contextual Q and A with QLoRA',
-          description: "Fine-tuned Falcon-7B on a 60k-entry dataset using QLoRA and PEFT on TPUs.",
+            },},{id: "projects-odet",
+          title: 'ODET',
+          description: "Ongoing research on multimodal deception detection with a compact Temporal Evidence Transformer.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/odet/";
+            },},{id: "projects-perception-grounded-theory-of-mind",
+          title: 'Perception-Grounded Theory of Mind',
+          description: "Ongoing research on robotic reasoning that tracks uncertainty and separates observed events from an agent&#39;s beliefs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/perception-grounded-theory-of-mind/";
+            },},{id: "projects-contextual-qa-with-qlora",
+          title: 'Contextual QA with QLoRA',
+          description: "Fine-tuned Falcon-7B on 60,000 examples using 4-bit QLoRA and PEFT on TPUs.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/qlora-qa/";
             },},{id: "projects-sentiment-analysis-with-aws-deployment",
@@ -70,7 +85,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/rendercv/rendercv_output/S_M_Masrur_Ahmed_CV.pdf", "_blank");
+          window.open("/Masrur_Resume_Intern_A26.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -92,6 +107,20 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/masrur-ahmed", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=D6Y-uVsAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-kaggle',
+        title: 'Kaggle',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.kaggle.com/masrur007", "_blank");
         },
       },{
         id: 'social-custom_social',
