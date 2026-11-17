@@ -56,6 +56,13 @@
             </a>
           </li>
 
+          {% assign home_page = site.pages | where: 'permalink', '/' | first %}
+          {% if home_page.home_cv %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ '/' | relative_url }}#experience">experience</a>
+            </li>
+          {% endif %}
+
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
@@ -100,7 +107,9 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains '://' -%}
+                  {%- if p.home_anchor and home_page.home_cv -%}
+                    {%- assign url = '/#' | append: p.home_anchor -%}
+                  {%- elsif p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
                     {%- assign url = '/blog/' -%}

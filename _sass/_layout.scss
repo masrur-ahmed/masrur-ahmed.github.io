@@ -44,6 +44,94 @@ body.sticky-bottom-footer {
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples
 
+// Homepage CV sections
+.home-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: 0.95rem;
+}
+
+.home-section {
+  margin-top: 3rem;
+
+  > h2,
+  .home-section-heading {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.home-section-heading,
+.home-entry-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+}
+
+.home-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.home-section-heading > a {
+  font-size: 0.9rem;
+}
+
+.home-entry {
+  padding: 0 0 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.home-entry-subtitle {
+  margin-bottom: 0.75rem;
+  color: var(--global-theme-color);
+}
+
+.home-entry-meta {
+  font-size: 0.9rem;
+
+  span {
+    display: block;
+    color: var(--global-text-color-light);
+  }
+}
+
+.home-highlights {
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.home-skills .card-text {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .home-skills .card-text {
+    grid-template-columns: 1fr;
+  }
+}
+
 /******************************************************************************
  * Publications
  ******************************************************************************/

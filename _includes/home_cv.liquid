@@ -1,0 +1,62 @@
+{% assign home_cv = site.data.cv.cv %}
+
+<section class="home-section" aria-labelledby="experience">
+  <h2 id="experience">Experience</h2>
+  {% for entry in home_cv.sections.Experience %}
+    {% include home_cv_entry.liquid entry=entry %}
+  {% endfor %}
+</section>
+
+<section class="home-section" aria-labelledby="publications">
+  <div class="home-section-heading">
+    <h2 id="publications">Publications</h2>
+    <a href="{{ '/publications/' | relative_url }}">Dedicated publications page <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="publications">
+    {% bibliography %}
+  </div>
+</section>
+
+<section class="home-section" aria-labelledby="education">
+  <h2 id="education">Education</h2>
+  {% for entry in home_cv.sections.Education %}
+    {% include home_cv_entry.liquid entry=entry %}
+  {% endfor %}
+</section>
+
+<section class="home-section" aria-labelledby="projects">
+  <div class="home-section-heading">
+    <h2 id="projects">Open-source projects</h2>
+    <a href="{{ '/projects/' | relative_url }}">All research and projects <span aria-hidden="true">↗</span></a>
+  </div>
+  {% for entry in home_cv.sections.Projects %}
+    <article class="home-entry">
+      <h3>{{ entry.name }}</h3>
+      {{ entry.summary | markdownify }}
+      {% if entry.highlights %}
+        <ul class="home-highlights">
+          {% for highlight in entry.highlights %}
+            <li>{{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>
+
+<section class="home-section" aria-labelledby="skills">
+  <h2 id="skills">Technical skills</h2>
+  <div class="home-skills">
+    {% assign entries = home_cv.sections.Skills %}
+    {% include cv/skills.liquid %}
+  </div>
+</section>
+
+<section class="home-section" aria-labelledby="awards">
+  <h2 id="awards">Awards and leadership</h2>
+  <ul class="home-highlights">
+    {% for entry in home_cv.sections['Awards and Leadership'] %}
+      <li>{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+    {% endfor %}
+  </ul>
+</section>

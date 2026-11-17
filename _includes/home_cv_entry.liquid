@@ -1,0 +1,34 @@
+{% assign home_entry = include.entry %}
+<article class="home-entry">
+  <div class="home-entry-heading">
+    <div>
+      {% if home_entry.company %}
+        <h3>{{ home_entry.position }}</h3>
+        <p class="home-entry-subtitle">{{ home_entry.company }}</p>
+      {% else %}
+        <h3>{{ home_entry.institution }}</h3>
+        <p class="home-entry-subtitle">{{ home_entry.degree }} in {{ home_entry.area }}</p>
+      {% endif %}
+    </div>
+    <p class="home-entry-meta">
+      <time datetime="{{ home_entry.start_date }}">{{ home_entry.start_date | append: '-01' | date: '%b %Y' }}</time>
+      –
+      {% if home_entry.end_date == 'present' %}
+        Present
+      {% else %}
+        <time datetime="{{ home_entry.end_date }}">{{ home_entry.end_date | append: '-01' | date: '%b %Y' }}</time>
+      {% endif %}
+      <span>{{ home_entry.location }}</span>
+    </p>
+  </div>
+  {% if home_entry.summary %}
+    {{ home_entry.summary | markdownify }}
+  {% endif %}
+  {% if home_entry.highlights %}
+    <ul class="home-highlights">
+      {% for highlight in home_entry.highlights %}
+        <li>{{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

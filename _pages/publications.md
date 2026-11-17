@@ -5,6 +5,7 @@ title: publications
 description: Publications and preprints in reverse chronological order.
 nav: true
 nav_order: 1
+home_anchor: publications
 ---
 
 <!-- _pages/publications.md -->
