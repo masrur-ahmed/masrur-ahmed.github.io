@@ -22,6 +22,7 @@ The site code is public configuration. Keep your login password and any API toke
 <!--ts-->
 
 - [Analytics Setup Guide](#analytics-setup-guide)
+  - [Recommended setup for this portfolio](#recommended-setup-for-this-portfolio)
   - [Overview](#overview)
   - [Supported Analytics Services](#supported-analytics-services)
   - [Google Analytics](#google-analytics)
