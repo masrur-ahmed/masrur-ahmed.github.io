@@ -12,7 +12,9 @@ on:
       - "**.bib"
       - "**.html"
       - "**.js"
+      - "**.json"
       - "**.liquid"
+      - "**.pdf"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -41,7 +43,9 @@ on:
       - "**.bib"
       - "**.html"
       - "**.js"
+      - "**.json"
       - "**.liquid"
+      - "**.pdf"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -74,7 +78,7 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
@@ -94,6 +98,7 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          touch _site/.nojekyll
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
@@ -102,4 +107,5 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: gh-pages # Settings > Pages must publish from this branch at / (root).
           folder: _site
