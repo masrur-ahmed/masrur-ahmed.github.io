@@ -17,7 +17,7 @@ This guide helps you add website analytics to track visitor statistics and behav
 
 4. Commit and push the change, then visit the deployed website and check the dashboard. Local development visits are not tracked by this integration. Ad blockers may need to be disabled during verification.
 
-The site code is public configuration. Keep your login password and any API tokens out of the repository. Tracking is currently disabled; no analytics account has been connected. See the [official setup instructions](https://www.goatcounter.com/help/start) and [data collection details](https://www.goatcounter.com/help/privacy).
+The site code is public configuration. Keep your login password and any API tokens out of the repository. Production tracking is enabled for `masrur.goatcounter.com`; local development visits are excluded. See the [official setup instructions](https://www.goatcounter.com/help/start) and [data collection details](https://www.goatcounter.com/help/privacy).
 
 <!--ts-->
 
