@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Document Layout Understanding
-description: Trained LayoutLMV3 on FUNSD for document entity extraction.
+description: Trained LayoutLMv3 on FUNSD for document entity extraction.
 category: open-source
-importance: 6
+importance: 7
 ---
 
-- Improved entity recognition and information extraction for forms.
-- Built dataset preprocessing and evaluation pipelines.
+Trained LayoutLMv3 on the FUNSD dataset for document entity extraction and layout-aware understanding of forms.
+
+[View the training code on GitHub](https://github.com/masrur-ahmed/Training-LayoutLMV3/).

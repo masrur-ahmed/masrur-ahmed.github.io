@@ -13,3 +13,19 @@ assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
 node_modules/
 vendor
+
+# Keep local credentials, private documents, and original upload metadata out of Git.
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+credentials*.json
+service-account*.json
+private/
+secrets/
+/1000041852.jpeg

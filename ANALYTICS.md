@@ -2,6 +2,23 @@
 
 This guide helps you add website analytics to track visitor statistics and behavior.
 
+## Recommended setup for this portfolio
+
+[GoatCounter](https://www.goatcounter.com/) offers a free hosted option for a personal website and reports page views, referring sites, approximate locations, browsers, and devices. It uses aggregate statistics rather than identifying people. You will not learn a visitor's name or email address just because they opened the site. Ad blockers and disabled JavaScript can prevent visits from being counted.
+
+1. [Create a GoatCounter account](https://www.goatcounter.com/signup) and add `https://masrur-ahmed.github.io` as your website. Keep the analytics dashboard private.
+2. Copy your site's code from its dashboard address: for `yourcode.goatcounter.com`, use only `yourcode`.
+3. Set these values in `_config.yml`:
+
+   ```yaml
+   goatcounter_code: yourcode
+   enable_goatcounter_analytics: true
+   ```
+
+4. Commit and push the change, then visit the deployed website and check the dashboard. Local development visits are not tracked by this integration. Ad blockers may need to be disabled during verification.
+
+The site code is public configuration. Keep your login password and any API tokens out of the repository. Tracking is currently disabled; no analytics account has been connected. See the [official setup instructions](https://www.goatcounter.com/help/start) and [data collection details](https://www.goatcounter.com/help/privacy).
+
 <!--ts-->
 
 - [Analytics Setup Guide](#analytics-setup-guide)
