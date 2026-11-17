@@ -123,13 +123,6 @@ ninja.data = [{
           window.open("https://www.kaggle.com/masrur007", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://masrur.netlify.app", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
